@@ -320,7 +320,7 @@ export class ApplyCodeBlockOperation {
 		return new AsyncIterableObject<TextEdit[] | ICellEditOperation[]>(async executor => {
 			const request: ICodeMapperRequest = {
 				codeBlocks: [codeBlock],
-        chatSessionId
+				chatSessionId
 			};
 			const response: ICodeMapperResponse = {
 				textEdit: (target: URI, edit: TextEdit[]) => {
