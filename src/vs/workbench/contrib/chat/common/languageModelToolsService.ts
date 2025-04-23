@@ -53,8 +53,8 @@ export type ToolDataSource =
 	}
 	| {
 		type: 'mcp';
-		label: string; collectionId:
-		string;
+		label: string;
+		collectionId: string;
 		definitionId: string;
 	}
 	| { type: 'internal' };
@@ -129,6 +129,7 @@ export interface IPreparedToolInvocation {
 	pastTenseMessage?: string | IMarkdownString;
 	confirmationMessages?: IToolConfirmationMessages;
 	presentation?: 'hidden' | undefined;
+	// When this gets extended, be sure to update `chatResponseAccessibleView.ts` to handle the new properties.
 	toolSpecificData?: IChatTerminalToolInvocationData | IChatToolInputInvocationData;
 }
 
